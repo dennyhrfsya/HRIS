@@ -28,14 +28,16 @@
 
 <!-- Membuat pemisah fitur dashboard, employee, role dan shift -->
 <!-- Custom dataTables -->
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.buttons.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.dataTables.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/jszip.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/pdfmake.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/vfs_fonts.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.print.min.js"></script>
+<?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail') { ?>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.buttons.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.dataTables.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/jszip.min.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/pdfmake.min.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/vfs_fonts.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.html5.min.js"></script>
+	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.print.min.js"></script>
+<?php } ?>
 
 <!-- Editor-->
 <script type="text/javascript" src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/Trumbowyg/dist/trumbowyg.min.js"></script>
@@ -184,7 +186,7 @@
 <?php } ?>
 <script type="text/javascript" src="<?php echo base_url() . 'skin/hrsale_vendor/hrsale_scripts/' . $path_url . '.js'; ?>"></script>
 <?php if ($this->router->fetch_class() == 'dashboard') { ?>
-	<?php if ($user[0]->user_role_id != 1): ?>
+	<?php if ($user[0]->user_role_id != 1) : ?>
 		<?php if ($system[0]->is_ssl_available == 'yes') { ?>
 			<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/user/set_clocking_ssl.js"></script>
 		<?php } else { ?>
@@ -205,12 +207,12 @@
 
 <?php if ($this->router->fetch_class() == 'dashboard') { ?>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/hrsale_payroll.js"></script>
-	<?php if ($user[0]->user_role_id == 1): ?>
+	<?php if ($user[0]->user_role_id == 1) : ?>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/employee_department.js"></script>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/employee_designation.js"></script>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/hrsale_projects.js"></script>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/hrsale_expense_deposit.js"></script>
-	<?php else: ?>
+	<?php else : ?>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/hrsale_projects.js"></script>
 		<script src="<?php echo base_url(); ?>skin/hrsale_vendor/hrsale_scripts/hrsale_charts/hrsale_tasks.js"></script>
 	<?php endif; ?>
@@ -260,9 +262,9 @@
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/dragula/dragula.js"></script>
 <?php } ?>
 <?php if ($this->router->fetch_class() == 'calendar' || $this->router->fetch_class() == 'dashboard') { ?>
-	<?php if ($user[0]->user_role_id == 1): ?>
+	<?php if ($user[0]->user_role_id == 1) : ?>
 		<?php $this->load->view('admin/components/vendors/full_calendar'); ?>
-	<?php else: ?>
+	<?php else : ?>
 		<?php $this->load->view('admin/components/vendors/half_calendar'); ?>
 	<?php endif; ?>
 

@@ -58,8 +58,10 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables/datatables.css">
 
   <!-- Custom dataTables -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/dataTables.dataTables.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/buttons.dataTables.css">
+  <?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail') { ?>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/dataTables.dataTables.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/buttons.dataTables.css">
+  <?php } ?>
 
   <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/Trumbowyg/dist/ui/trumbowyg.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/select2/select2.css">

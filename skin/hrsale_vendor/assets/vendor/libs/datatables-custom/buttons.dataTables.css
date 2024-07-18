@@ -207,16 +207,20 @@ div.dt-buttons>div.dt-button-split .dt-button {
     margin-bottom: 0.333em;
     padding: 0.5em 1em;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
+    /* Menambahkan warna button */
+    background-color: #26B4FF;
+    border-color: rgba(0, 0, 0, 0);
+    color: #fff !important;
+    border-radius: .25rem;
+    
     cursor: pointer;
     font-size: 0.88em;
     line-height: 1.6em;
     color: inherit;
     white-space: nowrap;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.1);
     /* Fallback */
-    background: linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    /* background: linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%); */
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr="rgba(230, 230, 230, 0.1)", EndColorStr="rgba(0, 0, 0, 0.1)");
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -230,6 +234,11 @@ div.dt-buttons>div.dt-button-split .dt-button {
 div.dt-buttons>.dt-button:first-child,
 div.dt-buttons>div.dt-button-split .dt-button:first-child {
     margin-left: 0;
+    border-color: rgba(0, 0, 0, 0);
+    /* Menambahkan warna button */
+    background: #26B4FF;
+    color: #fff;
+    border-radius: .25rem;
 }
 
 div.dt-buttons>.dt-button.disabled,
@@ -268,6 +277,9 @@ div.dt-buttons>div.dt-button-split .dt-button:hover:not(.disabled) {
     /* Fallback */
     background: linear-gradient(to bottom, rgba(153, 153, 153, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr="rgba(153, 153, 153, 0.1)", EndColorStr="rgba(0, 0, 0, 0.1)");
+    border-color: rgba(0, 0, 0, 0);
+    background: #24abf2;
+    color: #fff;
 }
 
 div.dt-buttons>.dt-button:focus:not(.disabled),

@@ -1455,10 +1455,9 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                       <div class="car-body"></div>
                       <div class="card-body">
                         <div class="box-datatable table-responsive">
-                          <table class="datatables-demo table table-striped table-bordered" id="mutation_reports">
+                          <table class="datatables-demo table table-striped table-bordered display nowrap" id="mutation_reports">
                             <thead>
                               <tr>
-                                <th><?php echo $this->lang->line('xin_view'); ?></th>
                                 <th>From</th>
                                 <th><?php echo $this->lang->line('xin_summary'); ?></th>
                                 <th><?php echo $this->lang->line('left_company'); ?></th>
@@ -1508,8 +1507,6 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                                 $xinfo = $this->lang->line('xin_transfer_to_location') . ': ' . $location_name . '<i></i></i></small><br><small class="text-muted"><i>' . $this->lang->line('xin_transfer_to_department') . ': ' . $department_name . '<i></i></i></small>';
                                 ?>
                                 <tr>
-                                  <td><?php echo $combhr; ?></td>
-
                                   <?php
                                   // Ambil nama lokasi
                                   $location = $this->Department_model->get_location_name($location_id);

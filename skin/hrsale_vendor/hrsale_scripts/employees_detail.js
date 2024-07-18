@@ -500,7 +500,13 @@ $(document).ready(function(){
 			// dom: 'Bfrtip',
 			layout: {
 				topStart: {
-					buttons: ['pageLength','excel', 'pdf', 'print']
+					buttons: [ 'pageLength',
+								{
+							extend: 'collection',
+							text: 'Export',
+							buttons: ['excel','pdf', 'print']
+						}
+					]
 				}
 			}
 			

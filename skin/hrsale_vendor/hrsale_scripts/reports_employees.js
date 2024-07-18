@@ -10,7 +10,13 @@ $(document).ready(function() {
 		// Menampilkan permintaan jumlah kolom
 		layout: {
 				topStart: {
-					buttons: ['pageLength','excel', 'pdf', 'print']
+					buttons: [ 'pageLength',
+								{
+							extend: 'collection',
+							text: 'Export',
+							buttons: ['excel','pdf', 'print']
+						}
+					]
 				}
 			},
 		"fnDrawCallback": function(settings){
@@ -50,10 +56,16 @@ $(document).ready(function() {
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 			// Menampilkan permintaan jumlah kolom
 			layout: {
-					topStart: {
-						buttons: ['pageLength','excel', 'pdf', 'print']
-					}
-				},
+				topStart: {
+					buttons: [ 'pageLength',
+								{
+							extend: 'collection',
+							text: 'Export',
+							buttons: ['excel','pdf', 'print']
+						}
+					]
+				}
+			},
 			"fnDrawCallback": function(settings){
 			$('[data-toggle="tooltip"]').tooltip();          
 			}
