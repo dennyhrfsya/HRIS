@@ -142,7 +142,7 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
                         <select class="form-control" name="company_id" id="aj_company_emp" data-plugin="select_hrm" data-placeholder="<?php echo $this->lang->line('left_company'); ?>">
                           <option value=""><?php echo $this->lang->line('left_company'); ?></option>
                           <?php foreach ($get_all_companies as $company) { ?>
-                            <?php if ($ecompany_id == $company->company_id): ?>
+                            <?php if ($ecompany_id == $company->company_id) : ?>
                               <option value="<?php echo $company->company_id ?>"><?php echo $company->name ?></option>
                             <?php endif; ?>
                           <?php } ?>
@@ -302,8 +302,8 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
                     <select name="reports_to" class="form-control" data-plugin="select_hrm" data-placeholder="<?php echo $this->lang->line('xin_reports_to'); ?>">
                       <option value=""><?php echo $this->lang->line('xin_reports_to'); ?></option>
                       <?php foreach (get_reports_to() as $reports_to) { ?>
-                        <?php if ($reports_to->user_id == $session['user_id']): ?>
-                          <option value="<?php echo $reports_to->user_id ?>" <?php if ($reports_to->user_id == $session['user_id']): ?> selected="selected" <?php endif; ?>><?php echo $reports_to->first_name . ' ' . $reports_to->last_name; ?></option>
+                        <?php if ($reports_to->user_id == $session['user_id']) : ?>
+                          <option value="<?php echo $reports_to->user_id ?>" <?php if ($reports_to->user_id == $session['user_id']) : ?> selected="selected" <?php endif; ?>><?php echo $reports_to->first_name . ' ' . $reports_to->last_name; ?></option>
                         <?php endif; ?>
                       <?php } ?>
                     </select>
@@ -353,7 +353,7 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
           <?php $count_module_attributes = $this->Custom_fields_model->count_module_attributes(); ?>
           <?php $module_attributes = $this->Custom_fields_model->all_hrsale_module_attributes(); ?>
           <!--<div class="row">
-                    <?php foreach ($module_attributes as $mattribute): ?>
+                    <?php foreach ($module_attributes as $mattribute) : ?>
                     <div class="col-md-3">
                       <div class="form-group">
                         <label for="<?php echo $mattribute->attribute; ?>"><?php echo $mattribute->attribute_label; ?></label>
@@ -362,9 +362,9 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
                     </div>
                     <?php endforeach; ?>
                   </div>-->
-          <?php if ($count_module_attributes > 0): ?>
+          <?php if ($count_module_attributes > 0) : ?>
             <div class="row">
-              <?php foreach ($module_attributes as $mattribute): ?>
+              <?php foreach ($module_attributes as $mattribute) : ?>
                 <?php if ($mattribute->attribute_type == 'date') { ?>
                   <div class="col-md-4">
                     <div class="form-group">
@@ -432,12 +432,13 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
   <div class="card">
     <div class="card-header with-elements"> <span class="card-header-title mr-2"><strong><?php echo $this->lang->line('xin_list_all'); ?></strong> <?php echo $this->lang->line('xin_employees'); ?></span>
       <div class="card-header-elements ml-md-auto"> <a href="<?php echo site_url('admin/employees/hr/'); ?>" class="text-dark collapsed">
-          <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-cog"></span> <?php echo $this->lang->line('left_employees_directory'); ?></button>
+          <!-- <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-cog"></span> <?php echo $this->lang->line('left_employees_directory'); ?></button>
         </a> <a class="text-dark collapsed" data-toggle="collapse" href="#filter_hrsale" aria-expanded="false">
           <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-color-filter"></span> <?php echo $this->lang->line('xin_filter'); ?></button>
-        </a> <a href="<?php echo site_url('admin/reports/employees/'); ?>" class="text-dark collapsed">
-          <button type="button" class="btn btn-xs btn-primary"> <span class="fas fa-chart-bar"></span> <?php echo $this->lang->line('xin_report'); ?></button>
-        </a> </div>
+        </a>  -->
+          <a href="<?php echo site_url('admin/reports/employees/'); ?>" class="text-dark collapsed">
+            <button type="button" class="btn btn-xs btn-primary"> <span class="fas fa-chart-bar"></span> <?php echo $this->lang->line('xin_report'); ?></button>
+          </a> </div>
     </div>
     <div class="card-body">
       <div class="box-datatable table-responsive">

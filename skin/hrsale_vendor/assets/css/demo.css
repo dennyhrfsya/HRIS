@@ -268,7 +268,7 @@ form .form-actions {
 }
 label {
     margin-bottom: calc(.438rem - 2px);
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: .83125rem;
     padding-bottom: 0;
 }

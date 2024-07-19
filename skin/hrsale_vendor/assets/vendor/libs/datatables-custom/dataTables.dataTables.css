@@ -336,7 +336,8 @@ table.dataTable {
 }
 table.dataTable thead th,
 table.dataTable tfoot th {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 500;
 }
 table.dataTable > thead > tr > th,
 table.dataTable > thead > tr > td {
@@ -544,9 +545,13 @@ div.dt-container div.dt-layout-cell:empty {
   display: none;
 }
 div.dt-container .dt-search input {
-  border: 1px solid #aaa;
+  /* border: 1px solid #aaa; */
+  border: 1px solid rgba(24, 28, 33, 0.1);
+  height: calc(1.5em + .376rem + 2px);
+  padding: .188rem .625rem;
+  font-size: .75rem;
   border-radius: 3px;
-  padding: 5px;
+  /* padding: 5px; */
   background-color: transparent;
   color: inherit;
   margin-left: 3px;
@@ -560,31 +565,46 @@ div.dt-container .dt-input {
 }
 div.dt-container select.dt-input {
   padding: 4px;
+  height: calc(1.5em + .376rem + 2px);
+  padding-top: .188rem;
+  padding-bottom: .188rem;
+  padding-left: .625rem;
+  font-size: .75rem;
 }
 div.dt-container .dt-paging .dt-paging-button {
   box-sizing: border-box;
   display: inline-block;
-  min-width: 1.5em;
-  padding: 0.5em 1em;
+  /* min-width: 1.5em;
+  padding: 0.5em 1em; */
+  padding: .375rem .25rem;
+  min-width: calc(1.5rem + 2px);
+  /* font-size: .75rem; */
+  font-size: 1rem;
+  line-height: 1;
   margin-left: 2px;
   text-align: center;
   text-decoration: none !important;
   cursor: pointer;
-  color: inherit !important;
+  /* color: inherit !important; */
+  color: #fff;
   border: 1px solid transparent;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: .25rem;
   background: transparent;
 }
 div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
-  color: inherit !important;
+  /* color: inherit !important; */
   border: 1px solid rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(230, 230, 230, 0.05)), color-stop(100%, rgba(0, 0, 0, 0.05))); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* Chrome10+,Safari5.1+ */
   background: -moz-linear-gradient(top, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* FF3.6+ */
   background: -ms-linear-gradient(top, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* IE10+ */
   background: -o-linear-gradient(top, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* Opera 11.10+ */
   background: linear-gradient(to bottom, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* W3C */
+  border-color: #26B4FF;
+  background-color: #26B4FF;
+  color: #fff;
 }
 div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
   cursor: default;
@@ -623,7 +643,8 @@ div.dt-container .dt-search,
 div.dt-container .dt-info,
 div.dt-container .dt-processing,
 div.dt-container .dt-paging {
-  color: inherit;
+  /* color: inherit; */
+  color: #a3a4a6;
 }
 div.dt-container .dataTables_scroll {
   clear: both;

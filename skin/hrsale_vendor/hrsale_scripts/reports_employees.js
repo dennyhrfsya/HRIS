@@ -56,6 +56,7 @@ $(document).ready(function() {
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 			// Menampilkan permintaan jumlah kolom
 			layout: {
+				
 				topStart: {
 					buttons: [ 'pageLength',
 								{
