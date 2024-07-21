@@ -10502,6 +10502,28 @@
 				 */
 				"sPrevious": "\u2039",
 			},
+
+			"oPaginate": {
+				/**
+				 * Label and character for first page button («)
+				 */
+				"sFirst": "\u00AB",
+	
+				/**
+				 * Last page button (»)
+				 */
+				"sLast": "\u00BB",
+	
+				/**
+				 * Next page button (›)
+				 */
+				"sNext": "\u203A",
+	
+				/**
+				 * Previous page button (‹)
+				 */
+				"sPrevious": "\u2039",
+			},
 	
 			/**
 			 * Plural object for the data type the table is showing

@@ -55,8 +55,7 @@ $(document).ready(function() {
 			// dom: 'lBfrtip',
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 			// Menampilkan permintaan jumlah kolom
-			layout: {
-				
+		layout: {
 				topStart: {
 					buttons: [ 'pageLength',
 								{

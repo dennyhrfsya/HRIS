@@ -37,13 +37,13 @@
 
   <!-- Theme settings -->
   <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
-  <!-- <script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/js/theme-settings.js"></script>
+  <script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/js/theme-settings.js"></script>
   <script>
     window.themeSettings = new ThemeSettings({
       cssPath: '<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/css/rtl/',
       themesPath: '<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/css/rtl/'
     });
-  </script> -->
+  </script>
 
   <!-- Core scripts -->
   <script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/js/pace.js"></script>

@@ -492,12 +492,20 @@ $(document).ready(function(){
     });
 
 	// On page load > xin_hrsale_table
-	// $('.xin_hrsale_table').DataTable();
+	$('.xin_hrsale_table').DataTable();
 
 	// Menampilkan hasil dari dataTable
 	$(document).ready(function () {
 			$('#mutation_reports').DataTable({
 			// dom: 'Bfrtip',
+			// "language": {
+			// 	"oPaginate": {
+			// 		"sFirst": "First",
+			// 		"sPrevious": "Previous",
+			// 		"sNext": "Next",
+			// 		"sLast": "Last"
+			// 		}
+			// 	},
 			layout: {
 				topStart: {
 					buttons: [ 'pageLength',
@@ -508,8 +516,12 @@ $(document).ready(function(){
 						}
 					]
 				}
+				// 		bottomEnd: {
+				// 		paging: {
+				// 			type: 'simple_numbers'
+				// 		}
+				// }
 			}
-			
 		});
 	});
 	

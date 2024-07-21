@@ -578,15 +578,14 @@ div.dt-container .dt-paging .dt-paging-button {
   padding: 0.5em 1em; */
   padding: .375rem .25rem;
   min-width: calc(1.5rem + 2px);
-  /* font-size: .75rem; */
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1;
   margin-left: 2px;
   text-align: center;
   text-decoration: none !important;
   cursor: pointer;
   /* color: inherit !important; */
-  color: #fff;
+  color: rgba(0, 0, 0, 0.5) ;
   border: 1px solid transparent;
   /* border-radius: 2px; */
   border-radius: .25rem;
@@ -594,7 +593,7 @@ div.dt-container .dt-paging .dt-paging-button {
 }
 div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
   /* color: inherit !important; */
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #26B4FF;
   /* background-color: rgba(0, 0, 0, 0.05); */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(230, 230, 230, 0.05)), color-stop(100%, rgba(0, 0, 0, 0.05))); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(230, 230, 230, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* Chrome10+,Safari5.1+ */

@@ -5,12 +5,6 @@ $(document).ready(function() {
 			url : base_url+"/employees_list/",
 			type : 'GET'
 		},
-		// Menampilkan permintaan jumlah kolom
-		layout: {
-				topStart: {
-					buttons: ['pageLength']
-				}
-			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
