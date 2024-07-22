@@ -26,7 +26,6 @@
 
 <script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables/datatables.js"></script>
 
-<!-- Membuat pemisah fitur dashboard, employee, role dan shift -->
 <!-- Custom dataTables -->
 <?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail') { ?>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.js"></script>
