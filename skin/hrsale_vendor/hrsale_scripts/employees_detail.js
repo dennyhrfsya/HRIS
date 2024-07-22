@@ -301,6 +301,21 @@ $(document).ready(function(){
             url : site_url+"employees/contacts/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -313,6 +328,21 @@ $(document).ready(function(){
             url : site_url+"employees/immigration/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -325,6 +355,21 @@ $(document).ready(function(){
             url : site_url+"employees/documents/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -337,6 +382,21 @@ $(document).ready(function(){
             url : site_url+"employees/qualification/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -349,6 +409,21 @@ $(document).ready(function(){
             url : site_url+"employees/experience/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -361,6 +436,21 @@ $(document).ready(function(){
             url : site_url+"employees/bank_account/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -372,6 +462,21 @@ $(document).ready(function(){
             url : site_url+"employees/security_level_list/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -384,6 +489,21 @@ $(document).ready(function(){
             url : site_url+"employees/contract/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -432,6 +552,21 @@ $(document).ready(function(){
             url : site_url+"employees/salary_overtime/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -444,6 +579,21 @@ $(document).ready(function(){
             url : site_url+"employees/salary_all_allowances/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -454,6 +604,21 @@ $(document).ready(function(){
             url : site_url+"employees/salary_all_commissions/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -464,6 +629,21 @@ $(document).ready(function(){
             url : site_url+"employees/salary_all_statutory_deductions/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -475,6 +655,21 @@ $(document).ready(function(){
             url : site_url+"employees/salary_all_other_payments/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
@@ -486,26 +681,57 @@ $(document).ready(function(){
             url : site_url+"employees/salary_all_deductions/"+$('#user_id').val(),
             type : 'GET'
         },
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		"fnDrawCallback": function(settings){
 		$('[data-toggle="tooltip"]').tooltip();          
 		}
     });
 
 	// On page load > xin_hrsale_table
-	$('.xin_hrsale_table').DataTable();
+	$('.xin_hrsale_table').DataTable({
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout : {
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			}
+	});
 
 	// Menampilkan hasil dari dataTable
 	$(document).ready(function () {
 			$('#mutation_reports').DataTable({
 			// dom: 'Bfrtip',
-			// "language": {
-			// 	"oPaginate": {
-			// 		"sFirst": "First",
-			// 		"sPrevious": "Previous",
-			// 		"sNext": "Next",
-			// 		"sLast": "Last"
-			// 		}
-			// 	},
+			"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
 			layout: {
 				topStart: {
 					buttons: [ 'pageLength',
@@ -515,12 +741,12 @@ $(document).ready(function(){
 							buttons: ['excel','pdf', 'print']
 						}
 					]
+				},
+						bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
 				}
-				// 		bottomEnd: {
-				// 		paging: {
-				// 			type: 'simple_numbers'
-				// 		}
-				// }
 			}
 		});
 	});

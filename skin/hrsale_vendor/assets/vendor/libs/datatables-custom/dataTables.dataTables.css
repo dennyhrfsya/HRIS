@@ -589,6 +589,7 @@ div.dt-container .dt-paging .dt-paging-button {
   border: 1px solid transparent;
   /* border-radius: 2px; */
   border-radius: .25rem;
+  border-color: rgba(24, 28, 33, 0.06);
   background: transparent;
 }
 div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
@@ -611,6 +612,7 @@ div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-pag
   border: 1px solid transparent;
   background: transparent;
   box-shadow: none;
+  border-color: rgba(24, 28, 33, 0.06);
 }
 div.dt-container .dt-paging .dt-paging-button:hover {
   color: white !important;

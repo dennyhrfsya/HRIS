@@ -8,6 +8,14 @@ $(document).ready(function() {
 		// dom: 'lBfrtip',
 		// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 		// Menampilkan permintaan jumlah kolom
+		"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
 		layout: {
 				topStart: {
 					buttons: [ 'pageLength',
@@ -17,6 +25,11 @@ $(document).ready(function() {
 							buttons: ['excel','pdf', 'print']
 						}
 					]
+				},
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
 				}
 			},
 		"fnDrawCallback": function(settings){
@@ -55,7 +68,15 @@ $(document).ready(function() {
 			// dom: 'lBfrtip',
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 			// Menampilkan permintaan jumlah kolom
-		layout: {
+			"language": {
+				"oPaginate": {
+					"sFirst": "First",
+					"sPrevious": "Previous",
+					"sNext": "Next",
+					"sLast": "Last"
+					}
+				},
+				layout: {
 				topStart: {
 					buttons: [ 'pageLength',
 								{
@@ -64,6 +85,11 @@ $(document).ready(function() {
 							buttons: ['excel','pdf', 'print']
 						}
 					]
+				},
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
 				}
 			},
 			"fnDrawCallback": function(settings){
