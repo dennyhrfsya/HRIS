@@ -294,6 +294,7 @@ $(document).ready(function(){
 		$('#'+core_projects_block).show();
 	});
 	
+	//Function Expression
 	// On page load: table_contacts
 	 var xin_table_contact = $('#xin_table_contact').dataTable({
         "bDestroy": true,

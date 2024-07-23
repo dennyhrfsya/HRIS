@@ -22,7 +22,13 @@ $(document).ready(function() {
 								{
 							extend: 'collection',
 							text: 'Export',
-							buttons: ['excel','pdf', 'print']
+							buttons: ['excel','print',
+								{
+									extend : 'pdf',
+									orientation : 'landscape',
+									pageSize : 'A4'
+								}
+							]
 						}
 					]
 				},
