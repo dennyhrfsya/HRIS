@@ -507,11 +507,11 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
             <div class="tab-pane active" id="tab_1-1">
               <div class="card <?php echo $get_animate; ?>">
                 <div class="card-header with-elements"> <span class="card-header-title mr-2"><strong><?php echo $this->lang->line('xin_list_all'); ?></strong> <?php echo $this->lang->line('xin_employees'); ?></span>
-                  <?php if (in_array('88', $role_resources_ids)) { ?>
+                  <!-- <?php if (in_array('88', $role_resources_ids)) { ?>
                     <div class="card-header-elements ml-md-auto"> <a href="<?php echo site_url('admin/employees/hr/'); ?>" class="text-dark collapsed">
                         <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-cog"></span> <?php echo $this->lang->line('left_employees_directory'); ?></button>
                       </a> </div>
-                  <?php } ?>
+                  <?php } ?> -->
                 </div>
                 <div class="card-body">
                   <div class="box-datatable table-responsive">
@@ -537,11 +537,11 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
           <div class="tab-pane <?php echo $act_cls; ?>" id="tab_2-2">
             <div class="card <?php echo $get_animate; ?>">
               <div class="card-header with-elements"> <span class="card-header-title mr-2"><strong><?php echo $this->lang->line('xin_my_team'); ?></strong></span>
-                <?php if (in_array('88', $role_resources_ids)) { ?>
+                <!-- <?php if (in_array('88', $role_resources_ids)) { ?>
                   <div class="card-header-elements ml-md-auto"> <a href="<?php echo site_url('admin/employees/hr/'); ?>" class="text-dark collapsed">
                       <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-cog"></span> <?php echo $this->lang->line('left_employees_directory'); ?></button>
                     </a> </div>
-                <?php } ?>
+                <?php } ?> -->
               </div>
               <div class="card-body">
                 <div class="box-datatable table-responsive">
