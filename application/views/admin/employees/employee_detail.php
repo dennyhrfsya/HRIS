@@ -53,8 +53,10 @@ $leave_user = $this->Xin_model->read_user_info($eid);
             <div class="row no-gutters row-bordered row-border-light">
               <div class="col-md-3 pt-0">
                 <div class="list-group list-group-flush account-settings-links"> <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-basic_info"> <i class="lnr lnr-user text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_basic'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-profile_picture"> <i class="lnr lnr-picture text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_profile_picture'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-immigration"> <i class="lnr lnr-rocket text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_employee_immigration'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-contacts"> <i class="lnr lnr-phone-handset text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_employee_emergency_contacts'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social"> <i class="lnr lnr-earth text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_social'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-document"> <i class="lnr lnr-file-add text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_document'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-qualification"> <i class="lnr lnr-file-empty text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_qualification'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-experience"> <i class="lnr lnr-hourglass text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_w_experience'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-baccount"> <i class="lnr lnr-apartment text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_baccount'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-cpassword"> <i class="lnr lnr-lock text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_cpassword'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-security_level"> <i class="lnr lnr-link text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_esecurity_level_title'); ?></a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-contract"> <i class="lnr lnr-pencil text-lightest"></i> &nbsp; <?php echo $this->lang->line('xin_e_details_contract'); ?></a>
+
                   <!-- Tambah mutasi report - List -->
                   <a class="list-group-item list-group-item-action" data-toggle="list" href="#mutation-reports"> <i class="lnr lnr-map-marker text-lightest"></i> &nbsp; <?php echo $this->lang->line('text_mutation_reports'); ?></a>
+
                 </div>
               </div>
               <div class="col-md-9">
@@ -106,6 +108,29 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                             </div>
                           </div>
                         </div>
+
+                        <!-- Custom form EKTP,BPJSTK dan BPJSKES -->
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="ektp"><?php echo $this->lang->line('ektp'); ?><i class="hrsale-asterisk">*</i></label>
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('ektp'); ?>" name="ektp" type="number" value="<?php echo $ektp; ?>">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="bpjstk"><?php echo $this->lang->line('bpjstk'); ?><i class="hrsale-asterisk">*</i></label>
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('bpjstk'); ?>" name="bpjstk" type="number" value="<?= $bpjstk; ?>">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="bpjskes" class="control-label"><?php echo $this->lang->line('bpjskes'); ?><i class="hrsale-asterisk">*</i></label>
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('bpjskes'); ?>" name="bpjskes" type="number" value="<?= $bpjskes; ?>">
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
@@ -1448,6 +1473,7 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                     </div>
                   </div>
 
+                  <!-- Custom laporan mutasi karyawan -->
                   <div class="tab-pane fade" id="mutation-reports">
                     <div class="box">
                       <div class="card-header with-elements"> <span class="card-header-title mr-2"> <strong> Mutation</strong> Reports </span> </div>
@@ -1547,6 +1573,7 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                     <div class="card-body pb-2">
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>

@@ -350,6 +350,28 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
               </div>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="ektp"><?php echo $this->lang->line('ektp'); ?><i class="hrsale-asterisk">*</i></label>
+                <input class="form-control" placeholder="<?php echo $this->lang->line('ektp'); ?>" name="ektp" type="number" value="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="bpjstk"><?php echo $this->lang->line('bpjstk'); ?><i class="hrsale-asterisk">*</i></label>
+                <input class="form-control" placeholder="<?php echo $this->lang->line('bpjstk'); ?>" name="bpjstk" type="number" value="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="bpjskes"><?php echo $this->lang->line('bpjskes'); ?><i class="hrsale-asterisk">*</i></label>
+                <input class="form-control" placeholder="<?php echo $this->lang->line('bpjskes'); ?>" name="bpjskes" type="number" value="">
+              </div>
+            </div>
+          </div>
+
           <?php $count_module_attributes = $this->Custom_fields_model->count_module_attributes(); ?>
           <?php $module_attributes = $this->Custom_fields_model->all_hrsale_module_attributes(); ?>
           <!--<div class="row">

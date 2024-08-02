@@ -1385,6 +1385,11 @@ class Employees extends MY_Controller
 			'path_url' => 'employees_detail',
 			'first_name' => $result[0]->first_name,
 			'last_name' => $result[0]->last_name,
+			// Custom controller EKTP,BPJSTK dan BPJSKES
+			'ektp' => $result[0]->ektp,
+			'bpjstk' => $result[0]->bpjstk,
+			'bpjskes' => $result[0]->bpjskes,
+
 			'user_id' => $result[0]->user_id,
 			'employee_id' => $result[0]->employee_id,
 			'company_id' => $result[0]->company_id,
@@ -2198,12 +2203,12 @@ class Employees extends MY_Controller
 			if ($this->input->post('first_name') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_first_name');
 			} /*else if(preg_match("/^(\pL{1,}[ ]?)+$/u",$this->input->post('first_name'))!=1) {
-			$Return['error'] = $this->lang->line('xin_hr_string_error');
-		}*/ else if ($this->input->post('last_name') === '') {
+				$Return['error'] = $this->lang->line('xin_hr_string_error');
+			}*/ else if ($this->input->post('last_name') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_last_name');
 			} /*else if(preg_match("/^(\pL{1,}[ ]?)+$/u",$this->input->post('last_name'))!=1) {
-			$Return['error'] = $this->lang->line('xin_hr_string_error');
-		}*/ else if ($this->input->post('employee_id') === '') {
+				$Return['error'] = $this->lang->line('xin_hr_string_error');
+			}*/ else if ($this->input->post('employee_id') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_employee_id');
 			} else if ($this->Employees_model->check_employee_id($this->input->post('employee_id')) > 0) {
 				$Return['error'] = $this->lang->line('xin_employee_id_already_exist');
@@ -2216,8 +2221,8 @@ class Employees extends MY_Controller
 			} else if ($this->input->post('department_id') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_department');
 			} /*else if($this->input->post('subdepartment_id')==='') {
-        	$Return['error'] = $this->lang->line('xin_hr_sub_department_field_error');
-		}*/ else if ($this->input->post('designation_id') === '') {
+				$Return['error'] = $this->lang->line('xin_hr_sub_department_field_error');
+			}*/ else if ($this->input->post('designation_id') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_designation');
 			} else if ($this->input->post('username') === '') {
 				$Return['error'] = $this->lang->line('xin_employee_error_username');
@@ -2253,6 +2258,13 @@ class Employees extends MY_Controller
 				$Return['error'] = $this->lang->line('xin_pincode_six_digits_error');
 			} else if ($this->Employees_model->check_employee_pincode($this->input->post('pin_code')) > 0) {
 				$Return['error'] = $this->lang->line('xin_pincode_already_exist');
+				// Custom controller EKTP,BPJSTK dan BPJSKES
+			} else if (strlen($this->input->post('ektp')) < 16) {
+				$Return['error'] = $this->lang->line('v_ektp_16_min');
+			} else if ($this->input->post('bpjstk') === '') {
+				$Return['error'] = $this->lang->line('v_bpjstk');
+			} else if ($this->input->post('bpjskes') === '') {
+				$Return['error'] = $this->lang->line('v_bpjskes');
 			}
 			if ($Return['error'] != '') {
 				$this->output($Return);
@@ -2298,6 +2310,11 @@ class Employees extends MY_Controller
 			$leave_categories = array($this->input->post('leave_categories'));
 			$cat_ids = implode(',', $this->input->post('leave_categories'));
 
+			// Custom controller EKTP,BPJSTK dan BPJSKES
+			$ektp = $this->Xin_model->clean_post($this->input->post('ektp'));
+			$bpjstk = $this->Xin_model->clean_post($this->input->post('bpjstk'));
+			$bpjskes = $this->Xin_model->clean_post($this->input->post('bpjskes'));
+
 			$data = array(
 				'employee_id' => $employee_id,
 				'office_shift_id' => $this->input->post('office_shift_id'),
@@ -2321,7 +2338,11 @@ class Employees extends MY_Controller
 				'address' => $address,
 				'is_active' => 1,
 				'leave_categories' => $cat_ids,
-				'created_at' => date('Y-m-d h:i:s')
+				'created_at' => date('Y-m-d h:i:s'),
+				// Custom controller EKTP,BPJSTK dan BPJSKES
+				'ektp' => $ektp,
+				'bpjstk' => $bpjstk,
+				'bpjskes' => $bpjskes
 			);
 			$iresult = $this->Employees_model->add($data);
 			if ($iresult) {
@@ -2492,6 +2513,13 @@ class Employees extends MY_Controller
 				$Return['error'] = $this->lang->line('xin_employee_error_contact_number');
 			} else if (!preg_match('/^([0-9]*)$/', $this->input->post('contact_no'))) {
 				$Return['error'] = $this->lang->line('xin_hr_numeric_error');
+			// Custom controller EKTP,BPJSTK dan BPJSKES
+			} else if (strlen($this->input->post('ektp')) < 16) {
+				$Return['error'] = $this->lang->line('v_ektp_16_min');
+			} else if ($this->input->post('bpjstk') === '') {
+				$Return['error'] = $this->lang->line('v_bpjstk');
+			} else if ($this->input->post('bpjskes') === '') {
+				$Return['error'] = $this->lang->line('v_bpjskes');
 			}
 
 			if ($Return['error'] != '') {
@@ -2523,6 +2551,10 @@ class Employees extends MY_Controller
 			$leave_categories = array($this->input->post('leave_categories'));
 			$cat_ids = implode(',', $this->input->post('leave_categories'));
 			$view_companies_id = implode(',', $this->input->post('view_companies_id'));
+			// Custom controller EKTP,BPJSTK dan BPJSKES
+			$ektp = $this->Xin_model->clean_post($this->input->post('ektp'));
+			$bpjstk = $this->Xin_model->clean_post($this->input->post('bpjstk'));
+			$bpjskes = $this->Xin_model->clean_post($this->input->post('bpjskes'));
 
 			$module_attributes = $this->Custom_fields_model->all_hrsale_module_attributes();
 			$count_module_attributes = $this->Custom_fields_model->count_module_attributes();
@@ -2547,6 +2579,11 @@ class Employees extends MY_Controller
 				'reports_to' => $this->input->post('reports_to'),
 				'first_name' => $first_name,
 				'last_name' => $last_name,
+				// Custom controller EKTP,BPJSTK dan BPJSKES
+				'ektp' => $ektp,
+				'bpjstk' => $bpjstk,
+				'bpjskes' => $bpjskes,
+				
 				'username' => $username,
 				'company_id' => $this->input->post('company_id'),
 				'location_id' => $this->input->post('location_id'),

@@ -81,7 +81,9 @@ $lang['dashboard_my_awards'] = 'My Awards';
 $lang['left_organization'] = 'Organization';
 $lang['left_company'] = 'Company';
 $lang['left_company_s'] = 'Company Structure';
-$lang['left_location'] = 'Location';
+// $lang['left_location'] = 'Location';
+// Custom lang
+$lang['left_location'] = 'Work Location';
 $lang['left_department'] = 'Department';
 $lang['left_designation'] = 'Designation';
 $lang['left_projects'] = 'Projects';
@@ -91,7 +93,7 @@ $lang['left_expense'] = 'Expense';
 $lang['let_staff'] = 'Staff';
 $lang['left_set_roles'] = 'Set Roles';
 $lang['left_awards'] = 'Awards';
-$lang['left_transfers'] = 'Transfers';
+$lang['left_transfers'] = 'Mutations';
 $lang['left_resignations'] = 'Resignations';
 $lang['left_travels'] = 'Travels';
 $lang['left_tickets'] = 'Tickets';
@@ -265,18 +267,19 @@ $lang['xin_d_not_restored'] = "Record deleted can't be restored!!!";
 $lang['xin_confirm_del'] = 'Confirm';
 
 // Location
-$lang['xin_locations'] = 'Locations';
+// Custom lang
+$lang['xin_locations'] = 'Work Location';
 $lang['error_company_field'] = "The company field is required.";
 $lang['error_locationhead_field'] = "The location head field is required.";
-$lang['xin_success_add_location'] = 'Location added.';
-$lang['xin_success_update_location'] = 'Location updated.';
-$lang['xin_success_delete_location'] = 'Location deleted.';
-$lang['xin_location'] = 'Location';
-$lang['xin_location_name'] = 'Location Name';
+$lang['xin_success_add_location'] = 'Work Location added.';
+$lang['xin_success_update_location'] = 'Work Location updated.';
+$lang['xin_success_delete_location'] = 'Work Location deleted.';
+$lang['xin_location'] = 'Work Location';
+$lang['xin_location_name'] = 'Work Location Name';
 $lang['xin_phone'] = 'Phone Number';
 $lang['xin_faxn'] = 'Fax Number';
-$lang['xin_edit_location'] = 'Edit Location';
-$lang['xin_view_location'] = 'View Location';
+$lang['xin_edit_location'] = 'Edit Work Location';
+$lang['xin_view_location'] = 'View Work Location';
 $lang['xin_view_locationh'] = 'Location Head';
 $lang['xin_view_locationmgr'] = 'Location HR Manager';
 
@@ -545,7 +548,7 @@ $lang['xin_e_details_baccount'] = "Bank Account";
 $lang['xin_e_details_contract'] = "Contract";
 $lang['xin_e_details_leave'] = "Leave";
 $lang['xin_e_details_shift'] = "Shift";
-$lang['xin_e_details_location'] = "Location";
+$lang['xin_e_details_location'] = "Work Location";
 $lang['xin_e_details_cpassword'] = "Change Password";
 $lang['xin_e_details_basic_info'] = "Basic Information";
 $lang['xin_employee_dol'] = "Date of Leaving";
@@ -692,19 +695,19 @@ $lang['xin_award_success_deleted'] = 'Award deleted.';
 
 $lang['xin_edit_award'] = 'Edit Award';
 $lang['xin_view_award'] = 'View Award';
-$lang['xin_transfers'] = 'Transfers';
+$lang['xin_transfers'] = 'Mutations';
 $lang['xin_transfers_error_date'] = 'The date field is required.';
-$lang['xin_transfers_success_added'] = 'Transfer added.';
-$lang['xin_transfers_success_updated'] = 'Transfer updated.';
-$lang['xin_transfers_success_deleted'] = 'Transfer deleted.';
-$lang['xin_transfer'] = 'Transfer';
-$lang['xin_employee_transfer'] = 'Employee to Transfer';
-$lang['xin_transfer_date'] = 'Transfer Date';
-$lang['xin_transfer_to_department'] = 'Transfer To (Department)';
-$lang['xin_transfer_to_location'] = 'Transfer To (Location)';
+$lang['xin_transfers_success_added'] = 'Mutation added.';
+$lang['xin_transfers_success_updated'] = 'Mutation updated.';
+$lang['xin_transfers_success_deleted'] = 'Mutation deleted.';
+$lang['xin_transfer'] = 'Mutations';
+$lang['xin_employee_transfer'] = 'Employee to Mutation';
+$lang['xin_transfer_date'] = 'Mutation Date';
+$lang['xin_transfer_to_department'] = 'Mutation To (Department)';
+$lang['xin_transfer_to_location'] = 'Mutation To (Location)';
 $lang['xin_transfer_select_location'] = 'Select Location';
-$lang['xin_edit_transfer'] = 'Edit Transfer';
-$lang['xin_view_transfer'] = 'View Transfer';
+$lang['xin_edit_transfer'] = 'Edit Mutation';
+$lang['xin_view_transfer'] = 'View Mutation';
 $lang['xin_error_resignation_notice_date'] = 'The notice date field is required.';
 $lang['xin_error_resignation_date'] = 'The resignation date field is required.';
 $lang['xin_success_resignation_added'] = 'Resignation added';
@@ -2891,7 +2894,15 @@ $lang['xin_enter_pincode'] = 'Enter Pin Code';
 $lang['xin_invalid_pincode'] = 'Invalid Pin Code';
 $lang['xin_no_nofitication_found'] = 'No notification found!!';
 $lang['xin_both_goal_appraisal'] = 'Both Goal and Appraisal';
-
-$lang['text_mutation_reports'] = 'Mutation Reports';////////////////////////////////// end hrsale v2.0.0
+// Custom lang
+$lang['text_mutation_reports'] = 'Mutation Reports';
+$lang['ektp'] = 'E-KTP';
+$lang['v_ektp_16_min'] = 'E-KTP must have 16 digits.';
+$lang['bpjstk'] = 'BPJS Ketenagakerjaan';
+$lang['v_bpjstk'] = 'BPJS Ketenagakerjaan field is required.';
+$lang['bpjskes'] = 'BPJS Kesehatan';
+$lang['v_bpjskes'] = 'BPJS Kesehatan field is required.';  
+///////
+/////////////////////////// end hrsale v2.0.0
 /* End of file hrsale_lang.php */
 /* Location: ./system/language/english/hrsale_lang.php */
