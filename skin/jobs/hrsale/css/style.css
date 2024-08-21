@@ -59,8 +59,12 @@ header {
 	float: left;
 }
 
-#logo img { margin-top: 24px; }
-
+/* #logo img { margin-top: 24px; } */
+#logo img {
+		max-height: 42px;
+		width: auto;
+		margin: 20px 30px 20px 0
+}
 
 /* Full-Width Header Styles */
 header.full-width .container, 
