@@ -5,6 +5,18 @@ $(document).ready(function() {
             url : site_url+"reports/report_employees_list/0/0/0/",
             type : 'GET'
         },
+	// 	columnDefs: [
+    //     {
+    //         target: 6,
+    //         visible: false,
+    //         searchable: false
+    //     },
+	// 	{
+	// 		target: 7,
+    //         visible: false,
+    //         searchable: false
+	// 	}
+	// ],
 		// dom: 'lBfrtip',
 		// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 		// Menampilkan permintaan jumlah kolom
@@ -22,7 +34,8 @@ $(document).ready(function() {
 								{
 							extend: 'collection',
 							text: 'Export',
-							buttons: ['excel','print',
+							buttons: ['excel'
+								,'print',
 								{
 									extend : 'pdf',
 									orientation : 'landscape',

@@ -36,6 +36,7 @@
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/vfs_fonts.js"></script>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.html5.min.js"></script>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.print.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.colVis.min.js"></script>
 <?php } ?>
 
 <!-- Editor-->

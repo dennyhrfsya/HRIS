@@ -85,9 +85,12 @@
                 <th><?php echo $this->lang->line('xin_employees_id'); ?></th>
                 <th><?php echo $this->lang->line('xin_employees_full_name'); ?></th>
                 <th><?php echo $this->lang->line('left_company'); ?></th>
-                <th><?php echo $this->lang->line('dashboard_email'); ?></th>
+                <th><?php echo $this->lang->line('xin_location'); ?></th>
+                <!-- <th><?php echo $this->lang->line('dashboard_email'); ?></th> -->
                 <th><?php echo $this->lang->line('xin_employee_department'); ?></th>
                 <th><?php echo $this->lang->line('xin_designation'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_doj'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_dol'); ?></th>
                 <th><?php echo $this->lang->line('dashboard_xin_status'); ?></th>
               </tr>
             </thead>

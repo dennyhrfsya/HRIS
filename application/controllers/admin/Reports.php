@@ -47,6 +47,8 @@ class Reports extends MY_Controller
 		$this->load->model("Roles_model");
 		$this->load->model("Employees_model");
 		$this->load->model("Designation_model");
+		// Custom load model
+		$this->load->model("Location_model");
 	}
 
 	// reports
@@ -442,13 +444,24 @@ class Reports extends MY_Controller
 				$department_name = '--';
 			}
 
+			// Custom Controller
+			$location = $this->Location_model->read_location_information($r->location_id);
+			if (!is_null($location)) {
+				$location_name = $location[0]->location_name;
+			} else {
+				$location_name = "--";
+			}
+
 			$data[] = array(
 				$r->employee_id,
 				$full_name,
 				$comp_name,
-				$r->email,
+				$location_name,
+				// $r->email,
 				$department_name,
 				$designation_name,
+				$r->date_of_joining,
+				$r->date_of_leaving,
 				$status
 			);
 		}
