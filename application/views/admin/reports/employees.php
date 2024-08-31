@@ -84,14 +84,25 @@
               <tr>
                 <th><?php echo $this->lang->line('xin_employees_id'); ?></th>
                 <th><?php echo $this->lang->line('xin_employees_full_name'); ?></th>
+                <th><?php echo $this->lang->line('dashboard_email'); ?></th>
                 <th><?php echo $this->lang->line('left_company'); ?></th>
                 <th><?php echo $this->lang->line('xin_location'); ?></th>
-                <!-- <th><?php echo $this->lang->line('dashboard_email'); ?></th> -->
                 <th><?php echo $this->lang->line('xin_employee_department'); ?></th>
                 <th><?php echo $this->lang->line('xin_designation'); ?></th>
+                <th><?php echo $this->lang->line('dashboard_xin_status'); ?></th>
                 <th><?php echo $this->lang->line('xin_employee_doj'); ?></th>
                 <th><?php echo $this->lang->line('xin_employee_dol'); ?></th>
-                <th><?php echo $this->lang->line('dashboard_xin_status'); ?></th>
+                <th><?php echo $this->lang->line('xin_ethnicity_type_title'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_gender'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_mstatus'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_dob'); ?></th>
+                <th><?php echo $this->lang->line('xin_employee_address'); ?></th>
+                <th><?php echo $this->lang->line('xin_e_details_contact'); ?></th>
+                <th><?php echo $this->lang->line('ektp_nik'); ?></th>
+                <th><?php echo $this->lang->line('bpjstk'); ?></th>
+                <th><?php echo $this->lang->line('bpjskes'); ?></th>
+                <th><?php echo $this->lang->line('xin_e_details_bank_name'); ?></th>
+                <th><?php echo $this->lang->line('xin_e_details_bank_name'); ?></th>
               </tr>
             </thead>
           </table>

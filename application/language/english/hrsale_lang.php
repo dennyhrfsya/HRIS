@@ -2896,12 +2896,19 @@ $lang['xin_no_nofitication_found'] = 'No notification found!!';
 $lang['xin_both_goal_appraisal'] = 'Both Goal and Appraisal';
 // Custom lang
 $lang['text_mutation_reports'] = 'Mutation Reports';
+$lang['ektp_nik'] = 'NIK';
 $lang['ektp'] = 'E-KTP';
 $lang['v_ektp_16_min'] = 'E-KTP must have 16 digits.';
+$lang['v_ektp_already'] = 'E-KTP already exist.';
 $lang['bpjstk'] = 'BPJS Ketenagakerjaan';
 $lang['v_bpjstk'] = 'BPJS Ketenagakerjaan field is required.';
 $lang['bpjskes'] = 'BPJS Kesehatan';
-$lang['v_bpjskes'] = 'BPJS Kesehatan field is required.';  
+$lang['v_bpjskes'] = 'BPJS Kesehatan field is required.';
+$lang['t_nik_kk'] = 'NIK KK';
+$lang['v_nik_kk_16_min'] = 'NIK KK must have 16 digits.';
+$lang['v_nik_kk_already'] = 'NIK KK already exist.';
+$lang['t_npwp'] = 'NPWP';
+$lang['v_npwp'] = 'NPWP field is required.';
 ///////
 /////////////////////////// end hrsale v2.0.0
 /* End of file hrsale_lang.php */

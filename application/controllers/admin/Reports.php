@@ -451,18 +451,43 @@ class Reports extends MY_Controller
 			} else {
 				$location_name = "--";
 			}
+			$religion = $this->Reports_model->read_religion_information($r->ethnicity_type);
+			if (!is_null($religion)) {
+				$religion_name = $religion[0]->type;
+			} else {
+				$religion_name = "--";
+			}
+			$bank = $this->Reports_model->read_join_employee($r->user_id);
+			if (!is_null($bank)) {
+				$bank_name = $bank[0]->bank_name;
+				$account_number = $bank[0]->account_number;
+			} else {
+				$bank_name = "--";
+				$account_number = "--";
+			}
 
 			$data[] = array(
 				$r->employee_id,
 				$full_name,
+				$r->email,
 				$comp_name,
 				$location_name,
-				// $r->email,
 				$department_name,
 				$designation_name,
+				$status,
 				$r->date_of_joining,
 				$r->date_of_leaving,
-				$status
+				$religion_name,
+				$r->gender,
+				$r->marital_status,
+				$r->date_of_birth,
+				$r->address,
+				$r->contact_no,
+				$r->ektp,
+				$r->bpjstk,
+				$r->bpjskes,
+				$bank_name,
+				$account_number
 			);
 		}
 		$output = array(

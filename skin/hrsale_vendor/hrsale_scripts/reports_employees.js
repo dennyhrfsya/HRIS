@@ -5,6 +5,18 @@ $(document).ready(function() {
             url : site_url+"reports/report_employees_list/0/0/0/",
             type : 'GET'
         },
+		columnDefs: [{ visible: false, targets: 8 },
+					{visible: false, targets: 9 },
+					{visible: false, targets: 10 },
+					{visible: false, targets: 11 },
+					{visible: false, targets: 12 },
+					{visible: false, targets: 13 },
+					{visible: false, targets: 14 },
+					{visible: false, targets: 15 },
+					{visible: false, targets: 16 },
+					{visible: false, targets: 17 },
+					{visible: false, targets: 18 }
+		],
 	// 	columnDefs: [
     //     {
     //         target: 6,
@@ -35,14 +47,35 @@ $(document).ready(function() {
 							extend: 'collection',
 							text: 'Export',
 							buttons: ['excel'
-								,'print',
+								,
+								{
+									extend : 'print',
+									exportOptions : {
+										columns : [0, 1, 2, 3, 4, 5, 6, 7]
+									}
+								},
 								{
 									extend : 'pdf',
 									orientation : 'landscape',
-									pageSize : 'A4'
+									pageSize : 'A4',
+									exportOptions : {
+										columns : [0, 1, 2, 3, 4, 5, 6, 7]
+									}
 								}
 							]
 						}
+						// {
+						// text: 'Atur Kolom',
+						// extend: 'colvis',
+						// },
+						// {
+						// text: 'Ekspor ke Excel',
+						// extend: 'excel',
+						// exportOptions: {
+						// 	columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+						// 	//Penambahan cetak excel contoh [,16,17]
+						// }
+						// },
 					]
 				},
 				bottomEnd: {
@@ -84,6 +117,18 @@ $(document).ready(function() {
 				url : site_url+"reports/report_employees_list/"+company_id+"/"+department_id+"/"+designation_id+"/",
 				type : 'GET'
 			},
+			columnDefs: [{ visible: false, targets: 8 },
+						{visible: false, targets: 9 },
+						{visible: false, targets: 10 },
+						{visible: false, targets: 11 },
+						{visible: false, targets: 12 },
+						{visible: false, targets: 13 },
+						{visible: false, targets: 14 },
+						{visible: false, targets: 15 },
+						{visible: false, targets: 16 },
+						{visible: false, targets: 17 },
+						{visible: false, targets: 18 }
+			],
 			// dom: 'lBfrtip',
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed
 			// Menampilkan permintaan jumlah kolom
@@ -101,8 +146,36 @@ $(document).ready(function() {
 								{
 							extend: 'collection',
 							text: 'Export',
-							buttons: ['excel','pdf', 'print']
+							buttons: ['excel'
+								,
+								{
+									extend : 'print',
+									exportOptions : {
+										columns : [0, 1, 2, 3, 4, 5, 6, 7]
+									}
+								},
+								{
+									extend : 'pdf',
+									orientation : 'landscape',
+									pageSize : 'A4',
+									exportOptions : {
+										columns : [0, 1, 2, 3, 4, 5, 6, 7]
+									}
+								}
+							]
 						}
+						// {
+						// text: 'Atur Kolom',
+						// extend: 'colvis',
+						// },
+						// {
+						// text: 'Ekspor ke Excel',
+						// extend: 'excel',
+						// exportOptions: {
+						// 	columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+						// 	//Penambahan cetak excel contoh [,16,17]
+						// }
+						// },
 					]
 				},
 				bottomEnd: {

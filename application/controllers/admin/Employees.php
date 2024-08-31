@@ -1389,6 +1389,8 @@ class Employees extends MY_Controller
 			'ektp' => $result[0]->ektp,
 			'bpjstk' => $result[0]->bpjstk,
 			'bpjskes' => $result[0]->bpjskes,
+			'nik_kk' => $result[0]->nik_kk,
+			'npwp' => $result[0]->npwp,
 
 			'user_id' => $result[0]->user_id,
 			'employee_id' => $result[0]->employee_id,
@@ -2259,12 +2261,20 @@ class Employees extends MY_Controller
 			} else if ($this->Employees_model->check_employee_pincode($this->input->post('pin_code')) > 0) {
 				$Return['error'] = $this->lang->line('xin_pincode_already_exist');
 				// Custom controller EKTP,BPJSTK dan BPJSKES
-			} else if (strlen($this->input->post('ektp')) < 16) {
+			} else if (strlen($this->input->post('ektp')) != 16) {
 				$Return['error'] = $this->lang->line('v_ektp_16_min');
+			} else if ($this->Employees_model->check_employee_ektp($this->input->post('ektp')) > 0) {
+				$Return['error'] = $this->lang->line('v_ektp_already');
 			} else if ($this->input->post('bpjstk') === '') {
 				$Return['error'] = $this->lang->line('v_bpjstk');
 			} else if ($this->input->post('bpjskes') === '') {
 				$Return['error'] = $this->lang->line('v_bpjskes');
+			} else if (strlen($this->input->post('nik_kk')) != 16) {
+				$Return['error'] = $this->lang->line('v_nik_kk_16_min');
+			} else if ($this->Employees_model->check_employee_nik_kk($this->input->post('nik_kk')) > 0) {
+				$Return['error'] = $this->lang->line('v_nik_kk_already');
+			} else if ($this->input->post('npwp') === '') {
+				$Return['error'] = $this->lang->line('v_npwp');
 			}
 			if ($Return['error'] != '') {
 				$this->output($Return);
@@ -2314,6 +2324,8 @@ class Employees extends MY_Controller
 			$ektp = $this->Xin_model->clean_post($this->input->post('ektp'));
 			$bpjstk = $this->Xin_model->clean_post($this->input->post('bpjstk'));
 			$bpjskes = $this->Xin_model->clean_post($this->input->post('bpjskes'));
+			$nik_kk = $this->Xin_model->clean_post($this->input->post('nik_kk'));
+			$npwp = $this->Xin_model->clean_post($this->input->post('npwp'));
 
 			$data = array(
 				'employee_id' => $employee_id,
@@ -2342,7 +2354,9 @@ class Employees extends MY_Controller
 				// Custom controller EKTP,BPJSTK dan BPJSKES
 				'ektp' => $ektp,
 				'bpjstk' => $bpjstk,
-				'bpjskes' => $bpjskes
+				'bpjskes' => $bpjskes,
+				'nik_kk' => $nik_kk,
+				'npwp' => $npwp
 			);
 			$iresult = $this->Employees_model->add($data);
 			if ($iresult) {
@@ -2513,13 +2527,17 @@ class Employees extends MY_Controller
 				$Return['error'] = $this->lang->line('xin_employee_error_contact_number');
 			} else if (!preg_match('/^([0-9]*)$/', $this->input->post('contact_no'))) {
 				$Return['error'] = $this->lang->line('xin_hr_numeric_error');
-			// Custom controller EKTP,BPJSTK dan BPJSKES
-			} else if (strlen($this->input->post('ektp')) < 16) {
+				// Custom controller EKTP,BPJSTK dan BPJSKES
+			} else if (strlen($this->input->post('ektp')) != 16) {
 				$Return['error'] = $this->lang->line('v_ektp_16_min');
 			} else if ($this->input->post('bpjstk') === '') {
 				$Return['error'] = $this->lang->line('v_bpjstk');
 			} else if ($this->input->post('bpjskes') === '') {
 				$Return['error'] = $this->lang->line('v_bpjskes');
+			} else if (strlen($this->input->post('nik_kk')) != 16) {
+				$Return['error'] = $this->lang->line('v_nik_kk_16_min');
+			} else if ($this->input->post('npwp') === '') {
+				$Return['error'] = $this->lang->line('v_npwp');
 			}
 
 			if ($Return['error'] != '') {
@@ -2555,6 +2573,8 @@ class Employees extends MY_Controller
 			$ektp = $this->Xin_model->clean_post($this->input->post('ektp'));
 			$bpjstk = $this->Xin_model->clean_post($this->input->post('bpjstk'));
 			$bpjskes = $this->Xin_model->clean_post($this->input->post('bpjskes'));
+			$nik_kk = $this->Xin_model->clean_post($this->input->post('nik_kk'));
+			$npwp = $this->Xin_model->clean_post($this->input->post('npwp'));
 
 			$module_attributes = $this->Custom_fields_model->all_hrsale_module_attributes();
 			$count_module_attributes = $this->Custom_fields_model->count_module_attributes();
@@ -2579,11 +2599,6 @@ class Employees extends MY_Controller
 				'reports_to' => $this->input->post('reports_to'),
 				'first_name' => $first_name,
 				'last_name' => $last_name,
-				// Custom controller EKTP,BPJSTK dan BPJSKES
-				'ektp' => $ektp,
-				'bpjstk' => $bpjstk,
-				'bpjskes' => $bpjskes,
-				
 				'username' => $username,
 				'company_id' => $this->input->post('company_id'),
 				'location_id' => $this->input->post('location_id'),
@@ -2609,6 +2624,12 @@ class Employees extends MY_Controller
 				'citizenship_id' => $this->input->post('citizenship_id'),
 				'nationality_id' => $this->input->post('nationality_id'),
 				'is_active' => $this->input->post('status'),
+				// Custom controller EKTP,BPJSTK dan BPJSKES
+				'ektp' => $ektp,
+				'bpjstk' => $bpjstk,
+				'bpjskes' => $bpjskes,
+				'nik_kk' => $nik_kk,
+				'npwp' => $npwp,
 			);
 			$id = $this->input->post('user_id');
 			$result = $this->Employees_model->basic_info($data, $id);

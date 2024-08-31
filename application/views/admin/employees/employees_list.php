@@ -350,14 +350,22 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
               </div>
             </div>
           </div>
-
+          <!-- Custom form EKTP, NIK KK, BPJSTK, BPJSKes, NPWP -->
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="form-group">
                 <label for="ektp"><?php echo $this->lang->line('ektp'); ?><i class="hrsale-asterisk">*</i></label>
                 <input class="form-control" placeholder="<?php echo $this->lang->line('ektp'); ?>" name="ektp" type="number" value="">
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nik_kk"><?php echo $this->lang->line('t_nik_kk'); ?><i class="hrsale-asterisk">*</i></label>
+                <input class="form-control" placeholder="<?php echo $this->lang->line('t_nik_kk'); ?>" name="nik_kk" type="number" value="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-md-4">
               <div class="form-group">
                 <label for="bpjstk"><?php echo $this->lang->line('bpjstk'); ?><i class="hrsale-asterisk">*</i></label>
@@ -368,6 +376,12 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
               <div class="form-group">
                 <label for="bpjskes"><?php echo $this->lang->line('bpjskes'); ?><i class="hrsale-asterisk">*</i></label>
                 <input class="form-control" placeholder="<?php echo $this->lang->line('bpjskes'); ?>" name="bpjskes" type="number" value="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="npwp"><?php echo $this->lang->line('t_npwp'); ?><i class="hrsale-asterisk">*</i></label>
+                <input class="form-control" placeholder="<?php echo $this->lang->line('t_npwp'); ?>" name="npwp" type="text" value="">
               </div>
             </div>
           </div>

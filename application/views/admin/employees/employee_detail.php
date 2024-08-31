@@ -111,12 +111,20 @@ $leave_user = $this->Xin_model->read_user_info($eid);
 
                         <!-- Custom form EKTP,BPJSTK dan BPJSKES -->
                         <div class="row">
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                             <div class="form-group">
                               <label for="ektp"><?php echo $this->lang->line('ektp'); ?><i class="hrsale-asterisk">*</i></label>
                               <input class="form-control" placeholder="<?php echo $this->lang->line('ektp'); ?>" name="ektp" type="number" value="<?php echo $ektp; ?>">
                             </div>
                           </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="nik_kk"><?php echo $this->lang->line('t_nik_kk'); ?><i class="hrsale-asterisk">*</i></label>
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('t_nik_kk'); ?>" name="nik_kk" type="number" value="<?php echo $nik_kk; ?>">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="bpjstk"><?php echo $this->lang->line('bpjstk'); ?><i class="hrsale-asterisk">*</i></label>
@@ -127,6 +135,12 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                             <div class="form-group">
                               <label for="bpjskes" class="control-label"><?php echo $this->lang->line('bpjskes'); ?><i class="hrsale-asterisk">*</i></label>
                               <input class="form-control" placeholder="<?php echo $this->lang->line('bpjskes'); ?>" name="bpjskes" type="number" value="<?= $bpjskes; ?>">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="npwp"><?php echo $this->lang->line('t_npwp'); ?><i class="hrsale-asterisk">*</i></label>
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('t_npwp'); ?>" name="npwp" type="number" value="<?php echo $npwp; ?>">
                             </div>
                           </div>
                         </div>
