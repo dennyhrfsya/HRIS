@@ -444,26 +444,39 @@ class Reports extends MY_Controller
 				$department_name = '--';
 			}
 
-			// Custom Controller
+			// Custom Controller - Location
 			$location = $this->Location_model->read_location_information($r->location_id);
 			if (!is_null($location)) {
 				$location_name = $location[0]->location_name;
 			} else {
 				$location_name = "--";
 			}
+			// Custom Controller - Religion
 			$religion = $this->Reports_model->read_religion_information($r->ethnicity_type);
 			if (!is_null($religion)) {
 				$religion_name = $religion[0]->type;
 			} else {
 				$religion_name = "--";
 			}
-			$bank = $this->Reports_model->read_join_employee($r->user_id);
+			// Custom Controller - Bank
+			$bank = $this->Reports_model->read_bank_join_employee($r->user_id);
 			if (!is_null($bank)) {
 				$bank_name = $bank[0]->bank_name;
 				$account_number = $bank[0]->account_number;
 			} else {
-				$bank_name = "--";
-				$account_number = "--";
+				$bank_name = "-";
+				$account_number = "-";
+			}
+			// Custom Controller - Emergency Contacts
+			$emergency_contacts = $this->Reports_model->read_emergency_contact_join_employee($r->user_id);
+			if (!is_null($emergency_contacts)) {
+				$contact_name = $emergency_contacts[0]->contact_name;
+				$relation = $emergency_contacts[0]->relation;
+				$mobile_phone = $emergency_contacts[0]->mobile_phone;
+			} else {
+				$contact_name = "-";
+				$relation = "-";
+				$mobile_phone = "-";
 			}
 
 			$data[] = array(
@@ -487,7 +500,10 @@ class Reports extends MY_Controller
 				$r->bpjstk,
 				$r->bpjskes,
 				$bank_name,
-				$account_number
+				$account_number,
+				$contact_name,
+				$relation,
+				$mobile_phone
 			);
 		}
 		$output = array(

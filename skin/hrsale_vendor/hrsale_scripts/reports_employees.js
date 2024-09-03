@@ -15,7 +15,12 @@ $(document).ready(function() {
 					{visible: false, targets: 15 },
 					{visible: false, targets: 16 },
 					{visible: false, targets: 17 },
-					{visible: false, targets: 18 }
+					{visible: false, targets: 18 },
+					{visible: false, targets: 19 },
+					{visible: false, targets: 20 },
+					{visible: false, targets: 21 },
+					{visible: false, targets: 22 },
+					{visible: false, targets: 23 }
 		],
 	// 	columnDefs: [
     //     {
@@ -127,7 +132,12 @@ $(document).ready(function() {
 						{visible: false, targets: 15 },
 						{visible: false, targets: 16 },
 						{visible: false, targets: 17 },
-						{visible: false, targets: 18 }
+						{visible: false, targets: 18 },
+						{visible: false, targets: 19 },
+						{visible: false, targets: 20 },
+						{visible: false, targets: 21 },
+						{visible: false, targets: 22 },
+						{visible: false, targets: 23 }
 			],
 			// dom: 'lBfrtip',
 			// "buttons": ['csv', 'excel', 'pdf', 'print','colvis'], // colvis > if needed

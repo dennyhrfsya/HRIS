@@ -102,7 +102,10 @@
                 <th><?php echo $this->lang->line('bpjstk'); ?></th>
                 <th><?php echo $this->lang->line('bpjskes'); ?></th>
                 <th><?php echo $this->lang->line('xin_e_details_bank_name'); ?></th>
-                <th><?php echo $this->lang->line('xin_e_details_bank_name'); ?></th>
+                <th><?php echo $this->lang->line('xin_e_details_acc_number'); ?></th>
+                <th><?php echo $this->lang->line('xin_name'); ?></th>
+                <th><?php echo $this->lang->line('xin_e_details_relation'); ?></th>
+                <th><?php echo $this->lang->line('t_emergency_number'); ?></th>
               </tr>
             </thead>
           </table>

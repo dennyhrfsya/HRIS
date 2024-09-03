@@ -213,14 +213,31 @@ class Reports_model extends CI_Model
 		}
 	}
 
-	public function read_join_employee($employee_id)
+	// Custom model - Bank Employee
+	public function read_bank_join_employee($employee_id)
 	{
 		// $sql = "SELECT `xin_employees`.`user_id`, `xin_employee_bankaccount`.`bank_name`, `account_number`
 		// 		FROM `xin_employees`
 		// 		JOIN `xin_employee_bankaccount`
 		// 		ON `xin_employees`.`user_id`=`xin_employee_bankaccount`.`employee_id`
 		// 		";
-		$sql = "SELECT * FROM xin_employee_bankaccount ORDER BY employee_id = ? 
+
+		$sql = "SELECT * FROM xin_employee_bankaccount WHERE employee_id = ? 
+				";
+		$binds = array($employee_id);
+		$query = $this->db->query($sql, $binds);
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return null;
+		}
+	}
+
+	// Custom Model - Emergency Contact Employee
+	public function read_emergency_contact_join_employee($employee_id)
+	{
+		$sql = "SELECT * FROM xin_employee_contacts WHERE employee_id = ? 
 				";
 		$binds = array($employee_id);
 		$query = $this->db->query($sql, $binds);

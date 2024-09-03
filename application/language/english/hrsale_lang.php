@@ -2909,6 +2909,7 @@ $lang['v_nik_kk_16_min'] = 'NIK KK must have 16 digits.';
 $lang['v_nik_kk_already'] = 'NIK KK already exist.';
 $lang['t_npwp'] = 'NPWP';
 $lang['v_npwp'] = 'NPWP field is required.';
+$lang['t_emergency_number'] = 'Emergency Number';
 ///////
 /////////////////////////// end hrsale v2.0.0
 /* End of file hrsale_lang.php */
