@@ -140,7 +140,7 @@ $leave_user = $this->Xin_model->read_user_info($eid);
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="npwp"><?php echo $this->lang->line('t_npwp'); ?><i class="hrsale-asterisk">*</i></label>
-                              <input class="form-control" placeholder="<?php echo $this->lang->line('t_npwp'); ?>" name="npwp" type="number" value="<?php echo $npwp; ?>">
+                              <input class="form-control" placeholder="<?php echo $this->lang->line('t_npwp'); ?>" name="npwp" type="text" value="<?php echo $npwp; ?>">
                             </div>
                           </div>
                         </div>

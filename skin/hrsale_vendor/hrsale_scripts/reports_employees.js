@@ -5,7 +5,9 @@ $(document).ready(function() {
             url : site_url+"reports/report_employees_list/0/0/0/",
             type : 'GET'
         },
-		columnDefs: [{ visible: false, targets: 8 },
+		columnDefs: [
+					{ visible: false, targets: 2 },
+					{ visible: false, targets: 8 },
 					{visible: false, targets: 9 },
 					{visible: false, targets: 10 },
 					{visible: false, targets: 11 },
@@ -122,7 +124,8 @@ $(document).ready(function() {
 				url : site_url+"reports/report_employees_list/"+company_id+"/"+department_id+"/"+designation_id+"/",
 				type : 'GET'
 			},
-			columnDefs: [{ visible: false, targets: 8 },
+			columnDefs: [{ visible: false, targets: 2 },
+		 				{ visible: false, targets: 8 },
 						{visible: false, targets: 9 },
 						{visible: false, targets: 10 },
 						{visible: false, targets: 11 },
