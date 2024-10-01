@@ -472,6 +472,9 @@ $reports_to = get_reports_team_data($session['user_id']); ?>
         </a> <a class="text-dark collapsed" data-toggle="collapse" href="#filter_hrsale" aria-expanded="false">
           <button type="button" class="btn btn-xs btn-primary"> <span class="ion ion-ios-color-filter"></span> <?php echo $this->lang->line('xin_filter'); ?></button>
         </a>  -->
+          <a href="<?= site_url('admin/resignation/'); ?>" class="text-dark collapsed">
+            <button type="button" class="btn btn-xs btn-primary"> <span class="fas fa-user"></span> <?php echo $this->lang->line('left_resignations'); ?></button>
+          </a>
           <a href="<?php echo site_url('admin/reports/employees/'); ?>" class="text-dark collapsed">
             <button type="button" class="btn btn-xs btn-primary"> <span class="fas fa-chart-bar"></span> <?php echo $this->lang->line('xin_report'); ?></button>
           </a> </div>
