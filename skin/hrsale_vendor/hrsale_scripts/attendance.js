@@ -3,8 +3,25 @@ var xin_table = $('#xin_table').dataTable({
 	"bDestroy": true,
 	"ajax": {
 		url : site_url+"timesheet/attendance_list/?attendance_date="+$('#attendance_date').val(),
-		type : 'GET'
+		type : 'GET',
 	},
+	layout: {
+			topStart: {
+				buttons: [ 'pageLength',
+							{
+						extend: 'collection',
+						text: 'Export',
+						buttons: ['excel'
+						]
+					}
+				]
+			},
+			bottomEnd: {
+					paging: {
+						type: 'simple_numbers'
+					}
+			}
+		},
 	"fnDrawCallback": function(settings){
 	$('[data-toggle="tooltip"]').tooltip();          
 	}
@@ -62,6 +79,23 @@ $("#attendance_datewise_report").submit(function(e){
 			url : site_url+"timesheet/date_wise_list/?start_date="+start_date+"&end_date="+end_date+"&user_id="+user_id,
 			type : 'GET'
 		},
+		layout: {
+				topStart: {
+					buttons: [ 'pageLength',
+								{
+							extend: 'collection',
+							text: 'Export',
+							buttons: ['excel'
+							]
+						}
+					]
+				},
+				bottomEnd: {
+						paging: {
+							type: 'simple_numbers'
+						}
+				}
+			},
 		/*dom: 'lBfrtip',
 		"buttons": ['csv', 'excel', 'pdf', 'print'], // colvis > if needed
 		"fnDrawCallback": function(settings){
@@ -87,6 +121,23 @@ $("#attendance_daily_report").submit(function(e){
 				url : site_url+"timesheet/attendance_list/?attendance_date="+$('#attendance_date').val()+"&location_id="+$('#location_id').val(),
 				type : 'GET'
 			},
+			layout: {
+					topStart: {
+						buttons: [ 'pageLength',
+									{
+								extend: 'collection',
+								text: 'Export',
+								buttons: ['excel'
+								]
+							}
+						]
+					},
+					bottomEnd: {
+							paging: {
+								type: 'simple_numbers'
+							}
+					}
+				},
 		});
 		xin_table2.api().ajax.reload(function(){
 		Ladda.stopAll();}, true);

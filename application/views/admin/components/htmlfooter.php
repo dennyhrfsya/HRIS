@@ -27,7 +27,7 @@
 <script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables/datatables.js"></script>
 
 <!-- Custom dataTables -->
-<?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail') { ?>
+<?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail' || $this->router->fetch_method() == 'attendance') { ?>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.js"></script>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.buttons.js"></script>
 	<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.dataTables.js"></script>

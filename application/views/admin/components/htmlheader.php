@@ -58,7 +58,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables/datatables.css">
 
   <!-- Custom dataTables -->
-  <?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail') { ?>
+  <?php if ($this->router->fetch_method() == 'employees' || $this->router->fetch_method() == 'detail' || $this->router->fetch_method() == 'attendance') { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/dataTables.dataTables.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/buttons.dataTables.css">
   <?php } ?>
