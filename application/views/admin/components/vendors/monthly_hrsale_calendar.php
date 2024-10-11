@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/dataTables.dataTables.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom/buttons.dataTables.css">
 <?php
 /* Define return | here result is used to return user data and error for error message */
 $someArray = array();
@@ -39,7 +37,6 @@ $imonth = date('F', $date);
 ?>
 <script type="text/javascript">
 	$(function() {
-
 		$('#calendar').fullCalendar({
 			defaultView: 'timelineMonth',
 			header: {
@@ -221,12 +218,3 @@ $imonth = date('F', $date);
 		height: 100%;
 	}
 </style>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/dataTables.buttons.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.dataTables.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/jszip.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/pdfmake.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/vfs_fonts.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url(); ?>skin/hrsale_vendor/assets/vendor/libs/datatables-custom-js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.colVis.min.js"></script>

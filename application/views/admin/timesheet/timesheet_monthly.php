@@ -128,7 +128,7 @@ $imonth = date('F', $date);
           <?php foreach ($get_all_companies as $company) { ?>
             <option value="<?php echo $company->company_id ?>"
               <?php if (isset($employee_id)): if ($company->company_id == $company_id): ?> selected="selected" <?php endif;
-                                                                                                        endif; ?>><?php echo $company->name ?></option>
+                                                                                                            endif; ?>><?php echo $company->name ?></option>
           <?php } ?>
         </select>
       </div>
